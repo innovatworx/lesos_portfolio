@@ -1,17 +1,17 @@
 const navLinks = [
     {
         id: 1,
-        name: "Projects",
+        name: "My Projects",
         type: "finder",
     },
     {
         id: 3,
-        name: "Contact",
+        name: "Contact Me",
         type: "contact",
     },
     {
         id: 4,
-        name: "Resume",
+        name: "My Resume",
         type: "resume",
     },
 ];
@@ -48,12 +48,12 @@ const dockApps = [
         icon: "safari.png",
         canOpen: true,
     },
-    {
-        id: "photos",
-        name: "Gallery", // was "Photos"
-        icon: "photos.png",
-        canOpen: true,
-    },
+    // {
+    //     id: "photos",
+    //     name: "Gallery", // was "Photos"
+    //     icon: "photos.png",
+    //     canOpen: true,
+    // },
     {
         id: "contact",
         name: "Contact", // or "Get in touch"
@@ -185,24 +185,24 @@ const photosLinks = [
     },
 ];
 
-const gallery = [
-    {
-        id: 1,
-        img: "/images/gal1.png",
-    },
-    {
-        id: 2,
-        img: "/images/gal2.png",
-    },
-    {
-        id: 3,
-        img: "/images/gal3.png",
-    },
-    {
-        id: 4,
-        img: "/images/gal4.png",
-    },
-];
+// const gallery = [
+//     {
+//         id: 1,
+//         img: "/images/gal1.png",
+//     },
+//     {
+//         id: 2,
+//         img: "/images/gal2.png",
+//     },
+//     {
+//         id: 3,
+//         img: "/images/gal3.png",
+//     },
+//     {
+//         id: 4,
+//         img: "/images/gal4.png",
+//     },
+// ];
 
 export {
     navLinks,
@@ -212,7 +212,7 @@ export {
     techStack,
     socials,
     photosLinks,
-    gallery,
+    // gallery,
 };
 
 const WORK_LOCATION = {
@@ -390,33 +390,33 @@ const ABOUT_LOCATION = {
     icon: "/icons/info.svg",
     kind: "folder",
     children: [
-        {
-            id: 1,
-            name: "me.png",
-            icon: "/images/image.png",
-            kind: "file",
-            fileType: "img",
-            position: "top-10 left-5",
-            imageUrl: "/images/adrian.jpg",
-        },
-        {
-            id: 2,
-            name: "casual-me.png",
-            icon: "/images/image.png",
-            kind: "file",
-            fileType: "img",
-            position: "top-28 right-72",
-            imageUrl: "/images/adrian-2.jpg",
-        },
-        {
-            id: 3,
-            name: "conference-me.png",
-            icon: "/images/image.png",
-            kind: "file",
-            fileType: "img",
-            position: "top-52 left-80",
-            imageUrl: "/images/adrian-3.jpeg",
-        },
+        // {
+        //     id: 1,
+        //     name: "me.png",
+        //     icon: "/images/image.png",
+        //     kind: "file",
+        //     fileType: "img",
+        //     position: "top-10 left-5",
+        //     imageUrl: "/images/adrian.jpg",
+        // },
+        // {
+        //     id: 2,
+        //     name: "casual-me.png",
+        //     icon: "/images/image.png",
+        //     kind: "file",
+        //     fileType: "img",
+        //     position: "top-28 right-72",
+        //     imageUrl: "/images/adrian-2.jpg",
+        // },
+        // {
+        //     id: 3,
+        //     name: "conference-me.png",
+        //     icon: "/images/image.png",
+        //     kind: "file",
+        //     fileType: "img",
+        //     position: "top-52 left-80",
+        //     imageUrl: "/images/adrian-3.jpeg",
+        // },
         {
             id: 4,
             name: "about-me.txt",
@@ -425,10 +425,11 @@ const ABOUT_LOCATION = {
             fileType: "txt",
             position: "top-60 left-5",
             subtitle: "Meet the Developer Behind the Code",
-            image: "/images/adrian.jpg",
+            // image: "/images/adrian.jpg",
+            image: "/images/avatar_me03a_icon.png",
             description: [
-                "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-                "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
+                "Hi! My name is Les 👋, I'm a software and web developer who enjoys building sleek, interactive apps and websites that actually work well.",
+                "My specialities are in HTML, CSS, JavaScript, React, Next.js, and Python—and I love making things feel smooth, fast, and just a little bit delightful.",
                 "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
                 "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
             ],
@@ -490,17 +491,49 @@ export const locations = {
     trash: TRASH_LOCATION,
 };
 
+{/*functional maximum and minimum buttons are not necessary*/}
+// const INITIAL_Z_INDEX = 1000;
+//
+// const WINDOW_CONFIG = {
+//     finder: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     contact: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     resume: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     safari: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     photos: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     terminal: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     txtfile: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     imgfile: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+// };
+//
+// export { INITIAL_Z_INDEX, WINDOW_CONFIG };
+
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-    finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-    imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+    contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+    resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+    safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+    photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+    terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+    txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+    imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
+// const INITIAL_Z_INDEX = 1000;
+//
+// const WINDOW_CONFIG = {
+//     finder: { isOpen: false, isClosing: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     contact: { isOpen: false, isClosing: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     resume: { isOpen: false, isClosing: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     safari: { isOpen: false, isClosing: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     terminal: { isOpen: false, isClosing: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     photos: { isOpen: false, isClosing: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     txtfile: { isOpen: false, isClosing: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+//     imgfile: { isOpen: false, isClosing: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+// };
+//
+// export { INITIAL_Z_INDEX, WINDOW_CONFIG };
+
+

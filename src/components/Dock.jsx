@@ -1,8 +1,8 @@
-import React, {useRef} from 'react';
-import { Tooltip } from 'react-tooltip'
+import React, { useRef } from 'react';
+import { Tooltip } from 'react-tooltip';
 import gsap from "gsap";
-import {dockApps} from "#constants/index.js";
-import {useGSAP} from "@gsap/react";
+import { dockApps } from "#constants/index.js";
+import { useGSAP } from "@gsap/react";
 import useWindowStore from "#store/window.js";
 
 const Dock = () => {
@@ -11,7 +11,7 @@ const Dock = () => {
 
     useGSAP(() => {
         const dock = dockRef.current;
-        if(!dock) return;
+        if (!dock) return;
 
         const icons = dock.querySelectorAll(".dock-icon");
 
@@ -36,18 +36,17 @@ const Dock = () => {
 
         const handleMouseMove = (e) => {
             const { left } = dock.getBoundingClientRect();
-
             animateIcons(e.clientX - left);
         };
 
         const resetIcons = () =>
             icons.forEach((icon) =>
-                    gsap.to(icon, {
-                        scale: 1,
-                        y: 0,
-                        duration: 0.3,
-                        ease: "power1.out",
-                    }),
+                gsap.to(icon, {
+                    scale: 1,
+                    y: 0,
+                    duration: 0.3,
+                    ease: "power1.out",
+                }),
             );
 
         dock.addEventListener('mousemove', handleMouseMove);
@@ -56,24 +55,25 @@ const Dock = () => {
         return () => {
             dock.removeEventListener('mousemove', handleMouseMove);
             dock.removeEventListener('mouseleave', resetIcons);
-        }
+        };
     }, []);
 
-
-
-    const toggleApp = (app) => {
-        //TODO Implement Open Window Logic
+    const toggleApp = (event, app) => {
         if (!app.canOpen) return;
 
-        const window = windows[app.id];
-
-        if(window.isOpen) {
+        const windowState = windows[app.id];
+        if (windowState.isOpen) {
             closeWindow(app.id);
-        } else {
-            openWindow(app.id);
+            return;
         }
 
-        console.log(windows);
+        const rect = event.currentTarget.getBoundingClientRect();
+        openWindow(app.id, null, {
+            x: rect.left,
+            y: rect.top,
+            width: rect.width,
+            height: rect.height,
+        });
     };
 
     return (
@@ -89,7 +89,7 @@ const Dock = () => {
                             data-tooltip-content={name}
                             data-tooltip-delay-show={150}
                             disabled={!canOpen}
-                            onClick={() => toggleApp({ id, canOpen })}
+                            onClick={(event) => toggleApp(event, { id, canOpen })}
                         >
                             <img
                                 src={`/images/${icon}`}
@@ -106,4 +106,5 @@ const Dock = () => {
         </section>
     );
 };
+
 export default Dock;
