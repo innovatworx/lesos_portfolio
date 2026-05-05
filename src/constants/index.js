@@ -223,9 +223,62 @@ const WORK_LOCATION = {
     kind: "folder",
     children: [
         // ▶ Project 1
+        // {
+        //     id: 5,
+        //     name: "Nike Ecommerce Website Application",
+        //     icon: "/images/folder.png",
+        //     kind: "folder",
+        //     position: "top-10 left-5", // icon position inside Finder
+        //     windowPosition: "top-[5vh] left-5", // optional: Finder window position
+        //     children: [
+        //         {
+        //             id: 1,
+        //             name: "Nike Project.txt",
+        //             icon: "/images/txt.png",
+        //             kind: "file",
+        //             fileType: "txt",
+        //             position: "top-5 left-10",
+        //             description: [
+        //                 "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
+        //                 "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
+        //                 "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
+        //                 "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+        //             ],
+        //         },
+        //         {
+        //             id: 2,
+        //             name: "nike.com",
+        //             icon: "/images/safari.png",
+        //             kind: "file",
+        //             fileType: "url",
+        //             href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+        //             position: "top-10 right-20",
+        //         },
+        //         {
+        //             id: 4,
+        //             name: "nike.png",
+        //             icon: "/images/image.png",
+        //             kind: "file",
+        //             fileType: "img",
+        //             position: "top-52 right-80",
+        //             imageUrl: "/images/project-1.png",
+        //         },
+        //         {
+        //             id: 5,
+        //             name: "Design.fig",
+        //             icon: "/images/plain.png",
+        //             kind: "file",
+        //             fileType: "fig",
+        //             href: "https://google.com",
+        //             position: "top-60 right-20",
+        //         },
+        //     ],
+        // },
+
+        // ▶ Project 1 1/2
         {
             id: 5,
-            name: "Nike Ecommerce Website Application",
+            name: "LesBot - AI Chatbot",
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-10 left-5", // icon position inside Finder
@@ -233,16 +286,15 @@ const WORK_LOCATION = {
             children: [
                 {
                     id: 1,
-                    name: "Nike Project.txt",
+                    name: "LesBot Project.txt",
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
                     position: "top-5 left-10",
                     description: [
-                        "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-                        "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-                        "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-                        "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+                        "LesBot is an AI-powered chatbot designed to provide quick, conversational responses to user questions. ",
+                        "Developed in Python, it features a graphical, user-friendly interface built with CustomTkinter and is powered by an LLM (Large Language Model) through Ollama, enabling LesBot to engage in natural, human-like conversations. ",
+                        "This setup makes LesBot ideal for both casual chats and answering informational queries. Its simple, responsive design prioritizes accessibility, making it easy to use for a wide range of users.",
                     ],
                 },
                 {
@@ -255,14 +307,23 @@ const WORK_LOCATION = {
                     position: "top-10 right-20",
                 },
                 {
-                    id: 4,
-                    name: "nike.png",
+                    id: 3,
+                    name: "LesBot",
                     icon: "/images/image.png",
                     kind: "file",
-                    fileType: "img",
-                    position: "top-52 right-80",
-                    imageUrl: "/images/project-1.png",
+                    fileType: "video",
+                    position: "top-20 left-10",
+                    videoUrl: "/vids/LesBot.mp4",
                 },
+                // {
+                //     id: 4,
+                //     name: "nike.png",
+                //     icon: "/images/image.png",
+                //     kind: "file",
+                //     fileType: "img",
+                //     position: "top-52 right-80",
+                //     imageUrl: "/images/project-1.png",
+                // },
                 {
                     id: 5,
                     name: "Design.fig",
@@ -306,6 +367,15 @@ const WORK_LOCATION = {
                     fileType: "url",
                     href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
                     position: "top-20 left-20",
+                },
+                {
+                    id: 3,
+                    name: "iPhone Demo",
+                    icon: "/images/image.png",
+                    kind: "file",
+                    fileType: "video",
+                    position: "top-10 left-30",
+                    videoUrl: "/vids/iPhone_website.mp4",
                 },
                 {
                     id: 4,
@@ -359,6 +429,67 @@ const WORK_LOCATION = {
                     fileType: "url",
                     href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
                     position: "top-10 right-20",
+                },
+                {
+                    id: 4,
+                    name: "food-delivery-app.png",
+                    icon: "/images/image.png",
+                    kind: "file",
+                    fileType: "img",
+                    position: "top-52 right-80",
+                    imageUrl: "/images/project-3.png",
+                },
+                {
+                    id: 5,
+                    name: "Design.fig",
+                    icon: "/images/plain.png",
+                    kind: "file",
+                    fileType: "fig",
+                    href: "https://google.com",
+                    position: "top-60 right-20",
+                },
+            ],
+        },
+         // ▶ Project 4
+        {
+            id: 8,
+            name: "Movie Rating App",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-55 left-80",
+            windowPosition: "top-[55vh] left-7",
+            children: [
+                {
+                    id: 1,
+                    name: "Movie Rating App Project.txt",
+                    icon: "/images/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top-5 left-10",
+                    description: [
+                        "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+                        "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+                        "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+                        "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+                    ],
+                },
+                {
+                    id: 2,
+                    name: "food-delivery-app.com",
+                    icon: "/images/safari.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+                    position: "top-10 right-20",
+                },
+                {
+                    id: 3,
+                    name: "Movie Rating App",
+                    icon: "/images/image.png",
+                    kind: "file",
+                    fileType: "video",
+                    position: "top-10 left-45",
+                    videoUrl: "/vids/Movie_Rating_App.mp4",
                 },
                 {
                     id: 4,
@@ -518,6 +649,7 @@ const WINDOW_CONFIG = {
     terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
     txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
     imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
+    video: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, openFrom: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

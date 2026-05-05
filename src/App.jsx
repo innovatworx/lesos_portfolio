@@ -8,7 +8,7 @@ import {WINDOW_CONFIG} from "#constants";
 import Navbar from "#components/Navbar.jsx";
 import {Welcome} from "#components/index.js";
 import Dock from "#components/Dock.jsx";
-import { Finder, Resume, Safari, Terminal, Text, Images, Contact } from "#windows";
+import { Finder, Resume, Safari, Terminal, Text, Images, Contact, VideoWindow } from "#windows";
 import Home from "#components/Home.jsx";
 // import useWindowStore from "#store/window.js";
 import Blurred from "./background/Blurred.jsx";
@@ -40,6 +40,7 @@ return (
         <Text />
         <Images />
         <Contact />
+        <VideoWindow />
 
         <Home />
     </main>

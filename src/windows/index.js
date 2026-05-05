@@ -6,6 +6,7 @@ import Finder from "#windows/Finder.jsx";
 import Text from "#windows/Text.jsx";
 import Images from "#windows/Images.jsx";
 import Contact from "#windows/Contact.jsx";
+import VideoWindow from "#windows/VideoWindow.jsx";
 
 
-export { Terminal, Safari, Resume, Finder, Text, Images, Contact };
+export { Terminal, Safari, Resume, Finder, Text, Images, Contact, VideoWindow };
