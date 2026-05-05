@@ -38,22 +38,22 @@ const Navbar = ({ onToggleTheme, theme }) => {
                 <ul>
                     {navIcons.map(({ id, img, tooltip }) => {
                         const isThemeToggle = img.includes("mode.svg");
+                        const isInteractiveIcon = tooltip === "Wi-Fi" || tooltip === "Search";
                         const tooltipText = isThemeToggle ? `Switch to ${theme === "light" ? "dark" : "light"} mode` : tooltip;
 
                         return (
                             <li
                                 key={id}
                                 onClick={isThemeToggle ? onToggleTheme : undefined}
-                                title={tooltipText}
                                 aria-label={isThemeToggle ? "Toggle theme" : tooltipText}
-                                className={isThemeToggle ? "cursor-pointer p-1 rounded hover:bg-gray-200/70 transition-colors" : "cursor-pointer p-1 rounded hover:bg-gray-200/70 transition-colors relative"}
+                                className={isThemeToggle ? "cursor-pointer p-1 rounded hover:bg-gray-200/70 transition-colors" : `${isInteractiveIcon ? "cursor-pointer" : "cursor-default"} p-1 rounded hover:bg-gray-200/70 transition-colors relative`}
                             >
                                 {isThemeToggle ? (
                                     theme === "light"
                                         ? <Moon className="w-4 h-4 text-black/80" data-tooltip-id="navbar-tooltip" data-tooltip-content={tooltipText} />
                                         : <Sun className="w-4 h-4 text-amber-300" data-tooltip-id="navbar-tooltip" data-tooltip-content={tooltipText} />
                                 ) : (
-                                    <img src={img} className="icon-hover cursor-pointer" alt={`icon-${img}`} onClick={() => setActiveDropdown(activeDropdown === id ? null : id)} data-tooltip-id="navbar-tooltip" data-tooltip-content={tooltipText} />
+                                    <img src={img} className={`icon-hover ${isInteractiveIcon ? "cursor-pointer" : "cursor-default"}`} alt={`icon-${img}`} onClick={isInteractiveIcon ? () => setActiveDropdown(activeDropdown === id ? null : id) : undefined} data-tooltip-id="navbar-tooltip" data-tooltip-content={tooltipText} />
                                 )}
                                 <div className={`absolute top-full mt-1 right--1 bg-white/20 backdrop-blur-md rounded-2xl shadow-none p-4 w-64 z-50 transition-all duration-200 ${activeDropdown === id ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
                                     <div className="grid grid-cols-2 gap-2">

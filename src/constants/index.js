@@ -59,17 +59,18 @@ const dockApps = [
     //     canOpen: true,
     // },
     {
-        id: "contact",
-        name: "Contact", // or "Get in touch"
-        icon: "contact.png",
-        canOpen: true,
-    },
-    {
         id: "terminal",
         name: "Skills", // was "Terminal"
         icon: "terminal.png",
         canOpen: true,
     },
+    {
+        id: "contact",
+        name: "Contact", // or "Get in touch"
+        icon: "contact.png",
+        canOpen: true,
+    },
+    
     {
         id: "trash",
         name: "Archive", // was "Trash"
@@ -513,6 +514,67 @@ const WORK_LOCATION = {
                     href: "https://google.com",
                     position: "top-60 right-20",
                 },
+            ],
+        },
+        // ▶ Project 5
+        {
+            id: 9,
+            name: "Python Contact App",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-55 left-80",
+            windowPosition: "top-[65vh] left-7",
+            children: [
+                {
+                    id: 1,
+                    name: "Contacts App Project.txt",
+                    icon: "/images/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top-5 left-10",
+                    description: [
+                        "This project is a contact management application developed in Python, implementing full CRUD (Create, Read, Update, Delete) functionality. ",
+                        "Users can store new contact information, view saved contacts, update existing entries, and delete contacts as needed.", 
+                        "The app features a clean, user-friendly interface, making it simple to manage personal and professional contacts efficiently.", 
+                        "This project showcases my expertise in Python and my ability to build practical applications with robust data management capabilities.",
+                    ],
+                },
+                // {
+                //     id: 2,
+                //     name: "food-delivery-app.com",
+                //     icon: "/images/safari.png",
+                //     kind: "file",
+                //     fileType: "url",
+                //     href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+                //     position: "top-10 right-20",
+                // },
+                {
+                    id: 3,
+                    name: "Contacts App",
+                    icon: "/images/image.png",
+                    kind: "file",
+                    fileType: "video",
+                    position: "top-5 left-45",
+                    videoUrl: "/vids/Python_Contact_App-1.mp4",
+                },
+                // {
+                //     id: 4,
+                //     name: "food-delivery-app.png",
+                //     icon: "/images/image.png",
+                //     kind: "file",
+                //     fileType: "img",
+                //     position: "top-52 right-80",
+                //     imageUrl: "/images/project-3.png",
+                // },
+                // {
+                //     id: 5,
+                //     name: "Design.fig",
+                //     icon: "/images/plain.png",
+                //     kind: "file",
+                //     fileType: "fig",
+                //     href: "https://google.com",
+                //     position: "top-60 right-20",
+                // },
             ],
         },
     ],
