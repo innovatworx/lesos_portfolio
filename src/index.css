@@ -7,6 +7,8 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"] *));
+
 /*:root {*/
 /*    --desktop-bg-image: url("/images/26-Tahoe-Beach-Day.png");*/
 /*}*/
@@ -63,8 +65,8 @@ body::before {
 body::after {
     /*background-image: var(--desktop-bg-night);*/
     background-image:
-            linear-gradient(rgba(48, 30, 18, 0.24), rgba(48, 30, 18, 0.24)),
-            var(--desktop-bg-night);
+        linear-gradient(rgba(48, 30, 18, 0.24), rgba(48, 30, 18, 0.24)),
+        var(--desktop-bg-night);
     opacity: 0;
 }
 
@@ -181,7 +183,7 @@ body::after {
         }
     }
 
-    #window-header {
+    /* #window-header {
         @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
     }
 
@@ -423,10 +425,10 @@ body::after {
         h2 {
             @apply font-bold text-sm text-center w-full;
         }
-    }
+    } */
 
     /*[id^="imgfile-"],*/
-    #imgfile {
+    /* #imgfile {
         @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
         #window-header {
@@ -442,23 +444,294 @@ body::after {
                 @apply w-full h-fit object-contain object-center;
             }
         }
+    } */
+
+    /* #window-header {
+    @apply flex items-center justify-between px-4 py-3 rounded-t-lg
+           bg-gray-50 dark:bg-neutral-800
+           border-b border-gray-200 dark:border-neutral-700
+           select-none text-sm text-gray-400 dark:text-neutral-400;
+}
+
+#safari {
+    @apply w-4xl absolute top-40 left-2/12 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+
+    .search {
+        @apply flex items-center gap-3 w-2/3 bg-white dark:bg-neutral-700 border border-gray-300 dark:border-neutral-600 rounded-lg px-3 py-2;
+
+        input {
+            @apply placeholder:text-gray-400 dark:placeholder:text-neutral-500 dark:text-neutral-100;
+        }
     }
 
-    #home {
-        @apply relative z-0 max-sm:hidden;
+    .blog {
+        @apply bg-white dark:bg-neutral-800 p-10 max-w-3xl mx-auto;
 
-        ul {
-            li {
-                @apply absolute z-0 select-none flex items-center flex-col;
+        .blog-post .content {
+            p { @apply text-xs text-gray-500 dark:text-neutral-400; }
+            h3 { @apply font-semibold text-base text-gray-800 dark:text-neutral-100; }
+        }
+    }
+}
+
+#terminal {
+    @apply w-xl absolute top-32 left-1/12 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+}
+
+#contact {
+    @apply max-w-2xl absolute top-60 left-5/12 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+}
+
+#photos {
+    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+
+    .sidebar {
+        @apply w-3/12 flex-none bg-gray-50 dark:bg-neutral-900 border-r border-gray-200 dark:border-neutral-700 flex flex-col p-5;
+
+        h2 { @apply text-xs font-medium text-gray-400 dark:text-neutral-500 mb-1; }
+    }
+}
+
+#resume {
+    @apply w-fit h-fit absolute top-16 left-7/12 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+}
+
+#finder {
+    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
+
+    .sidebar {
+        @apply w-48 bg-gray-50 dark:bg-neutral-900 border-r border-gray-200 dark:border-neutral-700 flex flex-col p-5 space-y-3;
+
+        h3 { @apply text-xs font-medium text-gray-400 dark:text-neutral-500 mb-1; }
+
+        ul .not-active {
+            @apply text-gray-700 dark:text-neutral-300 hover:bg-gray-200 dark:hover:bg-neutral-700;
+        }
+    }
+
+    .content {
+        @apply flex-1 p-8 bg-white dark:bg-neutral-800 max-w-2xl relative;
+
+        li p { @apply text-sm text-center font-medium w-40 dark:text-neutral-200; }
+    }
+}
+
+#txtfile {
+    @apply w-md absolute top-36 right-32 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+}
+
+#imgfile {
+    @apply w-xl absolute top-40 left-2/12 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+
+    .preview {
+        @apply p-2 bg-gray-200 dark:bg-neutral-900 max-h-[70vh];
+    }
+} */
+
+    /* #window-header {
+    @apply flex items-center justify-between px-4 py-3 rounded-t-lg
+           bg-gray-50 dark:bg-neutral-800
+           border-b border-gray-200 dark:border-neutral-700
+           select-none text-sm text-gray-400 dark:text-neutral-400;
+    transition: background-color var(--bg-fade-duration) ease-in-out,
+                border-color var(--bg-fade-duration) ease-in-out,
+                color var(--bg-fade-duration) ease-in-out;
+}
+
+#safari {
+    @apply w-4xl absolute top-40 left-2/12 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    transition: background-color var(--bg-fade-duration) ease-in-out;
+
+    .search {
+        @apply flex items-center gap-3 w-2/3 bg-white dark:bg-neutral-700 border border-gray-300 dark:border-neutral-600 rounded-lg px-3 py-2;
+        transition: background-color var(--bg-fade-duration) ease-in-out,
+                    border-color var(--bg-fade-duration) ease-in-out;
+    }
+
+    .blog {
+        @apply bg-white dark:bg-neutral-800 p-10 max-w-3xl mx-auto;
+        transition: background-color var(--bg-fade-duration) ease-in-out;
+    }
+}
+
+#terminal {
+    @apply w-xl absolute top-32 left-1/12 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    transition: background-color var(--bg-fade-duration) ease-in-out;
+}
+
+#contact {
+    @apply max-w-2xl absolute top-60 left-5/12 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    transition: background-color var(--bg-fade-duration) ease-in-out;
+}
+
+#photos {
+    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    transition: background-color var(--bg-fade-duration) ease-in-out;
+
+    .sidebar {
+        @apply w-3/12 flex-none bg-gray-50 dark:bg-neutral-900 border-r border-gray-200 dark:border-neutral-700 flex flex-col p-5;
+        transition: background-color var(--bg-fade-duration) ease-in-out,
+                    border-color var(--bg-fade-duration) ease-in-out;
+    }
+}
+
+#resume {
+    @apply w-fit h-fit absolute top-16 left-7/12 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    transition: background-color var(--bg-fade-duration) ease-in-out;
+}
+
+#finder {
+    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
+
+    .sidebar {
+        @apply w-48 bg-gray-50 dark:bg-neutral-900 border-r border-gray-200 dark:border-neutral-700 flex flex-col p-5 space-y-3;
+        transition: background-color var(--bg-fade-duration) ease-in-out,
+                    border-color var(--bg-fade-duration) ease-in-out;
+    }
+
+    .content {
+        @apply flex-1 p-8 bg-white dark:bg-neutral-800 max-w-2xl relative;
+        transition: background-color var(--bg-fade-duration) ease-in-out;
+    }
+}
+
+#txtfile {
+    @apply w-md absolute top-36 right-32 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    transition: background-color var(--bg-fade-duration) ease-in-out;
+}
+
+#imgfile {
+    @apply w-xl absolute top-40 left-2/12 bg-white dark:bg-neutral-800 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    transition: background-color var(--bg-fade-duration) ease-in-out;
+
+    .preview {
+        @apply p-2 bg-gray-200 dark:bg-neutral-900 max-h-[70vh];
+        transition: background-color var(--bg-fade-duration) ease-in-out;
+    }
+} */
+
+    #window-header {
+        @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50/70 dark:bg-neutral-800/60 backdrop-blur-xl border-b border-gray-200/50 dark:border-neutral-700/50 select-none text-sm text-gray-400 dark:text-neutral-400;
+        transition: background-color var(--bg-fade-duration) ease-in-out,
+            border-color var(--bg-fade-duration) ease-in-out,
+            color var(--bg-fade-duration) ease-in-out;
+    }
+
+    #safari {
+        @apply w-4xl absolute top-40 left-2/12 bg-white/70 dark:bg-neutral-800/60 backdrop-blur-xl border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+        transition: background-color var(--bg-fade-duration) ease-in-out;
+
+        .search {
+            @apply flex items-center gap-3 w-2/3 bg-white/60 dark:bg-neutral-700/50 border border-gray-300/50 dark:border-neutral-600/50 rounded-lg px-3 py-2;
+            transition: background-color var(--bg-fade-duration) ease-in-out,
+                border-color var(--bg-fade-duration) ease-in-out;
+        }
+
+        .blog {
+            @apply bg-white/40 dark:bg-neutral-800/40 p-10 max-w-3xl mx-auto;
+            transition: background-color var(--bg-fade-duration) ease-in-out;
+
+            h2 {
+                @apply text-xl font-bold text-pink-600 mb-10;
+            }
+
+            .blog-post {
+                @apply grid grid-cols-12 space-x-5;
 
                 img {
-                    @apply group-hover:bg-gray-950/10 p-1 rounded-md;
+                    @apply size-full rounded-md object-cover;
                 }
 
-                p {
-                    @apply text-sm text-white text-center px-1 rounded-md group-hover:bg-blue-500 transition-colors max-w-40;
+                .content {
+                    @apply col-span-10 space-y-3;
+
+                    p {
+                        @apply text-xs text-gray-500;
+                    }
+
+                    h3 {
+                        @apply font-semibold text-base text-gray-800;
+                    }
+
+                    a {
+                        @apply text-blue-600 text-xs hover:underline flex items-center gap-3;
+                    }
+
                 }
             }
         }
     }
-}
+        #terminal {
+            @apply w-xl absolute top-32 left-1/12 bg-white/70 dark:bg-neutral-800/60 backdrop-blur-xl border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+            transition: background-color var(--bg-fade-duration) ease-in-out;
+        }
+
+        #contact {
+            @apply max-w-2xl absolute top-60 left-5/12 bg-white/70 dark:bg-neutral-800/60 backdrop-blur-xl border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+            transition: background-color var(--bg-fade-duration) ease-in-out;
+        }
+
+        #photos {
+            @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white/70 dark:bg-neutral-800/60 backdrop-blur-xl border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+            transition: background-color var(--bg-fade-duration) ease-in-out;
+
+            .sidebar {
+                @apply w-3/12 flex-none bg-gray-50/50 dark:bg-neutral-900/40 border-r border-gray-200/50 dark:border-neutral-700/50 flex flex-col p-5;
+                transition: background-color var(--bg-fade-duration) ease-in-out,
+                    border-color var(--bg-fade-duration) ease-in-out;
+            }
+        }
+
+        #resume {
+            @apply w-fit h-fit absolute top-16 left-7/12 bg-white/70 dark:bg-neutral-800/60 backdrop-blur-xl border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+            transition: background-color var(--bg-fade-duration) ease-in-out;
+        }
+
+        #finder {
+            @apply absolute w-3xl left-40 top-20 border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
+
+            .sidebar {
+                @apply w-48 bg-gray-50/50 dark:bg-neutral-900/40 backdrop-blur-xl border-r border-gray-200/50 dark:border-neutral-700/50 flex flex-col p-5 space-y-3;
+                transition: background-color var(--bg-fade-duration) ease-in-out,
+                    border-color var(--bg-fade-duration) ease-in-out;
+            }
+
+            .content {
+                @apply flex-1 p-8 bg-white/70 dark:bg-neutral-800/60 backdrop-blur-xl max-w-2xl relative;
+                transition: background-color var(--bg-fade-duration) ease-in-out;
+            }
+        }
+
+        #txtfile {
+            @apply w-md absolute top-36 right-32 bg-white/70 dark:bg-neutral-800/60 backdrop-blur-xl border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+            transition: background-color var(--bg-fade-duration) ease-in-out;
+        }
+
+        #imgfile {
+            @apply w-xl absolute top-40 left-2/12 bg-white/70 dark:bg-neutral-800/60 backdrop-blur-xl border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+            transition: background-color var(--bg-fade-duration) ease-in-out;
+
+            .preview {
+                @apply p-2 bg-gray-200/50 dark:bg-neutral-900/40 max-h-[70vh];
+                transition: background-color var(--bg-fade-duration) ease-in-out;
+            }
+        }
+
+        #home {
+            @apply relative z-0 max-sm:hidden;
+
+            ul {
+                li {
+                    @apply absolute z-0 select-none flex items-center flex-col;
+
+                    img {
+                        @apply group-hover:bg-gray-950/10 p-1 rounded-md;
+                    }
+
+                    p {
+                        @apply text-sm text-white text-center px-1 rounded-md group-hover:bg-blue-500 transition-colors max-w-40;
+                    }
+                }
+            }
+        }
+    }
