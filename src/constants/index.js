@@ -104,7 +104,7 @@ const blogPosts = [
     },
 ];
 
-const techStack = [
+const techSkills = [
     {
         category: "Frontend",
         items: ["React.js", "Next.js", "TypeScript"],
@@ -115,7 +115,7 @@ const techStack = [
     },
     {
         category: "Styling",
-        items: ["Tailwind CSS", "Sass", "CSS"],
+        items: ["Adobe", "CSS", "Figma", "Sass", "Tailwind CSS"],
     },
     {
         category: "Backend",
@@ -123,11 +123,11 @@ const techStack = [
     },
     {
         category: "Database",
-        items: ["MongoDB", "PostgreSQL"],
+        items: ["AppWrite", "MongoDB", "MySQL", "PostgreSQL", "SQL"],
     },
     {
         category: "Dev Tools",
-        items: ["Git", "GitHub", "Docker"],
+        items: ["Docker", "Git", "GitHub", "Visual Studio Code & IDE", "Vite", "WebStorm"],
     },
 ];
 
@@ -214,7 +214,7 @@ export {
     navIcons,
     dockApps,
     blogPosts,
-    techStack,
+    techSkills,
     socials,
     photosLinks,
     // gallery,

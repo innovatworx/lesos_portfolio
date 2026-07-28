@@ -662,13 +662,84 @@ body::after {
         }
     }
         #terminal {
-            @apply w-xl absolute top-32 left-1/12 bg-white/70 dark:bg-neutral-800/60 backdrop-blur-xl border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
-            transition: background-color var(--bg-fade-duration) ease-in-out;
+            /* @apply w-xl absolute top-32 left-1/12 bg-white/70 drop-shadow-2xl dark:bg-neutral-800/60 backdrop-blur-xl border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+            transition: background-color var(--bg-fade-duration) ease-in-out; */
+            /* @apply text-sm font-roboto p-5 dark:text-neutral-200;
+        transition: color var(--bg-fade-duration) ease-in-out; */
+
+            @apply w-xl absolute top-32 left-1/12 bg-white/70 drop-shadow-2xl dark:bg-neutral-800/60 backdrop-blur-xl border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden text-sm font-roboto dark:text-neutral-200;
+        transition: background-color var(--bg-fade-duration), color var(--bg-fade-duration) ease-in-out;
+
+            h2 {
+                @apply font-bold text-sm text-center w-full;
+            }
+
+            .techskills {
+                @apply text-sm font-roboto p-5;
+
+                .label {
+                    @apply flex items-center ms-10 mt-7;
+                }
+
+                .content {
+                    @apply py-5 my-5 border-y border-dashed space-y-1;
+
+                    li {
+                        .check {
+                            @apply text-[#00A154] w-5;
+                        }
+
+                        h3 {
+                            @apply font-semibold text-[#00A154] w-32 ms-5;
+                        }
+
+                        ul {
+                            @apply flex items-center gap-3;
+                        }
+                    }
+                }
+
+                .footnote {
+                    @apply text-[#00A154] space-y-1;
+
+                    p {
+                        @apply flex items-center;
+
+                        svg {
+                            @apply w-5 me-5;
+                        }
+                    }
+                }
+            }
         }
 
         #contact {
             @apply max-w-2xl absolute top-60 left-5/12 bg-white/70 dark:bg-neutral-800/60 backdrop-blur-xl border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
             transition: background-color var(--bg-fade-duration) ease-in-out;
+
+            h2 {
+                @apply font-bold text-sm text-center w-full;
+            }
+
+            h3 {
+                @apply text-xl font-semibold;
+            }
+
+            ul {
+                @apply flex items-center gap-3;
+
+                li {
+                    @apply rounded-lg p-3 w-60 hover:-translate-y-0.5 hover:scale-105 origin-center transition-all duration-300;
+
+                    a {
+                        @apply space-y-5;
+                    }
+
+                    p {
+                        @apply font-semibold text-sm text-white;
+                    }
+                }
+            }
         }
 
         #photos {

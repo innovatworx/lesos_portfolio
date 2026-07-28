@@ -1,5 +1,5 @@
 import WindowWrapper from "#hoc/WindowWrapper.jsx";
-import {techStack} from "#constants";
+import {techSkills} from "#constants";
 import {Check, Flag} from "lucide-react";
 import WindowControls from "#components/WindowControls.jsx";
 
@@ -8,13 +8,13 @@ const Terminal = () => {
         <>
             <div id="window-header">
                 <WindowControls target="terminal"/>
-                <h2>Tech Stack</h2>
+                <h2>Tech Skills</h2>
             </div>
 
-            <div className="techstack">
+            <div className="techskills">
                 <p>
                     <span className="font-bold">@les % </span>
-                    show tech stack
+                    show tech skills
                 </p>
 
                 <div className="label">
@@ -23,7 +23,7 @@ const Terminal = () => {
                 </div>
 
                 <ul className="content">
-                    {techStack.map(({ category, items }) => (
+                    {techSkills.map(({ category, items }) => (
                         <li key={category} className="flex items-center">
                             <Check className="check" size={20} />
                             <h3>{category}</h3>
