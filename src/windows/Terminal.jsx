@@ -1,5 +1,5 @@
 import WindowWrapper from "#hoc/WindowWrapper.jsx";
-import {techSkills} from "#constants";
+import {techSkills, skills} from "#constants";
 import {Check, Flag} from "lucide-react";
 import WindowControls from "#components/WindowControls.jsx";
 
@@ -22,7 +22,7 @@ const Terminal = () => {
                     <p>Technologies</p>
                 </div>
 
-                <ul className="content">
+                {/* <ul className="content">
                     {techSkills.map(({ category, items }) => (
                         <li key={category} className="flex items-center">
                             <Check className="check" size={20} />
@@ -37,8 +37,12 @@ const Terminal = () => {
                             </ul>
                         </li>
                     ))}
-                </ul>
+                </ul> */}
 
+                {skills.map((item, index) => (<div>
+                        <p className="font-bold text-white-800">{item.name}</p>
+                        </div>))}
+                                            
                 <div className="footnote">
                     <p>
                         <Check size={20} /> 5 of 5 stacks loaded successfully (100%)

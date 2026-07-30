@@ -758,6 +758,10 @@ body::after {
             transition: background-color var(--bg-fade-duration) ease-in-out;
         }
 
+    .pdf-scroll {
+        @apply max-h-[80vh] overflow-y-auto;
+    }
+
         #finder {
             @apply absolute w-3xl left-40 top-20 border border-white/30 dark:border-neutral-700/40 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
 

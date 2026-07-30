@@ -70,7 +70,7 @@ const dockApps = [
         icon: "contact.png",
         canOpen: true,
     },
-    
+
     {
         id: "trash",
         name: "Archive", // was "Trash"
@@ -129,6 +129,144 @@ const techSkills = [
         category: "Dev Tools",
         items: ["Docker", "Git", "GitHub", "Visual Studio Code & IDE", "Vite", "WebStorm"],
     },
+];
+
+export const skills = [
+  {
+    id: 1,
+    name: 'Cloud Computing',
+    pos: 'Jefferson County Commission, Self projects',
+    duration: '2018 - Present',
+    title: "In cloud computing, I have knowledge of Azure, AWS, and Google Cloud, enabling me to implement scalable, secure, and efficient solutions tailored to diverse project requirements.",
+    // icon: '/assets/framer.svg',
+    // animation: 'victory',
+  },
+  {
+    id: 2,
+    name: 'Web Development',
+    pos: 'Jefferson County Commission, MSpark, Self projects',
+    duration: '2012 - Present',
+    title: "In web development, I leverage HTML, CSS, JavaScript, TypeScript, jQuery, Bootstrap, Tailwind CSS, Angular, GSAP, and React for web applications, as well as React Native for mobile applications, to create responsive and dynamic user experiences.",
+    // icon: '/assets/figma.svg',
+    // animation: 'clapping',
+  },
+  {
+    id: 3,
+    name: 'Design and Creativity',
+    pos: 'RR Donnelley, MSpark, Self projects',
+    duration: '2012 - Present',
+    title: "Utilizing tools like Adobe Creative Cloud/Suite, Blender, Canva, Inkscape, GIMP, and Figma, I create visually compelling designs and animations, enhancing project aesthetics and user engagement across various platforms.",
+    icon: '/assets/notion.svg',
+    animation: 'salute',
+  },
+  {
+    id: 4,
+    name: 'Programming Languages',
+    pos: 'Jefferson County Commission, Mspark, Self projects',
+    duration: '2000 - Present',
+    title: "Throughout my projects, I've applied JavaScript and TypeScript for interactive web development, Python for data processing and backend services, C# and Java for application development, and Visual Basic for legacy systems and automation, adapting each language to meet specific project needs effectively.",
+    icon: '/assets/notion.svg',
+    animation: 'salute',
+  },
+  {
+    id: 5,
+    name: 'Database Management',
+    pos: 'Jefferson County Commission, RR Donnelley, MSpark, Self projects',
+    duration: '2012 - Present',
+    title: "MySQL, MongoDB, NoSQL,SQL, MariaDB. Across various projects, I’ve utilized MySQL for relational data needs, MongoDB and NoSQL for flexible, scalable data structures, and MariaDB for robust storage solutions, ensuring secure, efficient data handling and seamless integration at every step. ",
+    // icon: '/assets/figma.svg',
+    // animation: 'clapping',
+  },
+  {
+    id: 6,
+    name: 'Frameworks',
+    pos: 'Jefferson County Commission, MSpark, Self projects',
+    duration: '2015 - Present',
+    title: "With frameworks like React, Express, Django, Vite.js, and Next.js, I efficiently structure, develop, and scale applications, ensuring performance and adaptability in every project.",
+    // icon: '/assets/framer.svg',
+    // animation: 'victory',
+  },
+  {
+    id: 7,
+    name: 'Development Tools',
+    pos: 'Jefferson County Commission, MSpark, Self projects',
+    duration: '2000 - Present',
+    title: "Visual Studio IDE and Code, Git, GitHub, IntelliJ, PyCharm, Postman, JSON server. Leveraging development tools like Visual Studio, IntelliJ, Postman for API testing, and PyCharm, I streamline each phase of the SDLC to build, test, and deploy high-quality solutions efficiently.",
+    // icon: '/assets/framer.svg',
+    // animation: 'victory',
+  },
+  {
+    id: 8,
+    name: 'Microsoft Technologies',
+    pos: 'Jefferson County Commission, RR Donnelley, Self projects',
+    duration: '2000 - Present',
+    title: "Windows versions, Office 365, Azure, Microsoft Endpoint Configuration Manager (MECM/SCCM), Remote Desktop tools, Active Directory (AD), Hyper-V. Actively managed and deployed systems using these technologies. Build a Microsoft Endpoint Configuration Manager (MECM/SCCM) at home lab.",
+    // icon: '/assets/framer.svg',
+    // animation: 'victory',
+  },
+  {
+    id: 9,
+    name: 'Software Development Life Cycle (SDLC)',
+    pos: 'Self projects',
+    duration: '2000 - Present',
+    title: "Using the Software Development Life Cycle (SDLC), I systematically gathered requirements, designed and developed the solution, rigorously tested it, and deployed it with a plan for ongoing maintenance to ensure quality and reliability.",
+    // icon: '/assets/framer.svg',
+    // animation: 'victory',
+  },
+  {
+    id: 10,
+    name: 'Cyber, Internet and Network Security',
+    pos: 'Jefferson County Commission, MSpark, Self projects',
+    duration: '2019 - Present',
+    title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
+    // icon: '/assets/framer.svg',
+    // animation: 'victory',
+  },
+  {
+    id: 11,
+    name: 'Productivity Software',
+    pos: 'Jefferson County Commission, RR Donnelley, MSpark, Self projects',
+    duration: '2012 - Present',
+    title: "Microsoft O365 was the primary office software used at Jefferson County Commission, Microsoft Office at RR Donnelley and Libre Office and Google office suite (G Suite) at MSpark",
+    // icon: '/assets/framer.svg',
+    // animation: 'victory',
+  },
+  {
+    id: 12,
+    name: 'Server environment',
+    pos: 'Jefferson County Commission, Self projects',
+    duration: '2018 - Present',
+    title: "Managed and monitored the servers at Jefferson County Commission prior to and during the migration to Infrastructure as a Service (IaaS). Cleared discs and added more storage. MySQL and JSON Server for self projects. Build a home server",
+    // icon: '/assets/framer.svg',
+    // animation: 'victory',
+  },
+  {
+    id: 13,
+    name: 'Analyzing and Troubleshooting',
+    pos: 'Jefferson County Commission, RR Donnelley, MSpark, Self projects',
+    duration: '2012 - Present',
+    title: "At Jefferson County, I originally worked as a Helpdesk and IT Support tech before taking a Systems Administrator role. In IT Support, I assisted 3000+ countywide employees troubleshooting tech issues. As a Systems Administrator, my primary duty was managing and monitoring Microsoft Endpoint Configuration Manager (MECM/SCCM). I handled ticket requests for both roles. At RR Donnelley and MSpark, I co-assisted as an IT Support Technician.",
+    // icon: '/assets/framer.svg',
+    // animation: 'victory',
+  },
+  {
+    id: 14,
+    name: 'Artificial Intelligence (Machine Learning, Deep Learning, Natural Language Processing)',
+    pos: 'Jefferson County Commission, Self projects',
+    duration: '2019 - Present',
+    title: "Took Artificial Intelligence (AI) courses at Jefferson County Commission. Designed, developed personal AI projects. Corrected errors in AI code and prompts. Used AI to assist in coding, writing, and research. Used AI to create images and videos. AI tools and Large Language Models (LLMs) used: ChatGPT, MidJourney, DALL-E, Runway, Synthesia, ElevenLabs, CodeX, CoPilot, WebStorm Junie AI, Gemini, OpenClaw, Lovable, CodeRabbit, Hugging Face, and others.",
+    // icon: '/assets/framer.svg',
+    // animation: 'victory',
+  },
+  {
+    id: 15,
+    name: 'Content Management System',
+    pos: 'MSpark, Self projects',
+    duration: '2012 - Present',
+    title: "WordPress, Joomla, Sanity.  During my employment at MSpark, Joomla served as the go-to tool for creating webpages for clients. I use CMS tools such as Sanity WordPress and Wix for personal projects.",
+    // icon: '/assets/framer.svg',
+    // animation: 'victory',
+  },
 ];
 
 const socials = [
@@ -315,8 +453,8 @@ const WORK_LOCATION = {
                             position: "top-5 left-10",
                             description: [
                                 "This project is a contact management application developed in Python, implementing full CRUD (Create, Read, Update, Delete) functionality. ",
-                                "Users can store new contact information, view saved contacts, update existing entries, and delete contacts as needed.", 
-                                "The app features a clean, user-friendly interface, making it simple to manage personal and professional contacts efficiently.", 
+                                "Users can store new contact information, view saved contacts, update existing entries, and delete contacts as needed.",
+                                "The app features a clean, user-friendly interface, making it simple to manage personal and professional contacts efficiently.",
                                 "This project showcases my expertise in Python and my ability to build practical applications with robust data management capabilities.",
                             ],
                         },
@@ -609,8 +747,8 @@ const WORK_LOCATION = {
                             position: "top-5 left-10",
                             description: [
                                 "This project is a contact management application developed in Python, implementing full CRUD (Create, Read, Update, Delete) functionality. ",
-                                "Users can store new contact information, view saved contacts, update existing entries, and delete contacts as needed.", 
-                                "The app features a clean, user-friendly interface, making it simple to manage personal and professional contacts efficiently.", 
+                                "Users can store new contact information, view saved contacts, update existing entries, and delete contacts as needed.",
+                                "The app features a clean, user-friendly interface, making it simple to manage personal and professional contacts efficiently.",
                                 "This project showcases my expertise in Python and my ability to build practical applications with robust data management capabilities.",
                             ],
                         },
@@ -715,8 +853,8 @@ const WORK_LOCATION = {
                             position: "top-5 left-10",
                             description: [
                                 "This project is a contact management application developed in Python, implementing full CRUD (Create, Read, Update, Delete) functionality. ",
-                                "Users can store new contact information, view saved contacts, update existing entries, and delete contacts as needed.", 
-                                "The app features a clean, user-friendly interface, making it simple to manage personal and professional contacts efficiently.", 
+                                "Users can store new contact information, view saved contacts, update existing entries, and delete contacts as needed.",
+                                "The app features a clean, user-friendly interface, making it simple to manage personal and professional contacts efficiently.",
                                 "This project showcases my expertise in Python and my ability to build practical applications with robust data management capabilities.",
                             ],
                         },
@@ -844,7 +982,7 @@ export const locations = {
     trash: TRASH_LOCATION,
 };
 
-{/*functional maximum and minimum buttons are not necessary*/}
+{/*functional maximum and minimum buttons are not necessary*/ }
 // const INITIAL_Z_INDEX = 1000;
 //
 // const WINDOW_CONFIG = {
