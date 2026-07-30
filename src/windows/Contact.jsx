@@ -24,11 +24,11 @@ const Contact = () => {
 
             <div className="p-5 space-y-5">
                 <img
-                    src=""
+                    src="/images/20260730_1.jpg"
                     // src="/images/adrian.jpg"
                     alt=""
                     // alt="Adrian"
-                    className="w-20 rounded-full" />
+                    className="w-20 rounded-full mx-auto block mt-10 mb-10" />
 
                 <h3>Let's Connect</h3>
                 <p>Got an idea? A bug to squash? Or Just wanna talk tech? I'm in.</p>
