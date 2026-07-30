@@ -12,14 +12,14 @@ const Terminal = () => {
             </div>
 
             <div className="techskills">
-                <p>
+                {/* <p>
                     <span className="font-bold">@les % </span>
                     show tech skills
-                </p>
+                </p> */}
 
                 <div className="label">
-                    <p className="w-32">Category</p>
-                    <p>Technologies</p>
+                    {/* <p className="w-32">Category</p>
+                    <p>Technologies</p> */}
                 </div>
 
                 {/* <ul className="content">
