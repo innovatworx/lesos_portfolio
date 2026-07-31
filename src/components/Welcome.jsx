@@ -1,7 +1,8 @@
-import {useRef} from "react";
+import { useRef } from "react";
 import gsap from "gsap";
-import {useGSAP} from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 
+// ... existing FONT_WEIGHTS, ECHO_PRESET, ECHO_CONFIGS, renderText, setupTextHover, setupEchoHover ...
 const FONT_WEIGHTS = {
     subtitle: { min: 200, max: 500, default: 200 },
     title: { min: 400, max: 900, default: 400 },
@@ -27,7 +28,7 @@ const ECHO_CONFIGS = {
 };
 
 const renderText = (text, className, baseWeight = 400) => {
-    return [... text].map((char, i) => (
+    return [...text].map((char, i) => (
         <span
             key={i}
             className={className}
@@ -39,7 +40,7 @@ const renderText = (text, className, baseWeight = 400) => {
 };
 
 const setupTextHover = (container, type) => {
-    if (!container) return () => {};
+    if (!container) return () => { };
     const letters = container.querySelectorAll("span");
     const { min, max, default: base } = FONT_WEIGHTS[type];
 
@@ -81,9 +82,9 @@ const setupTextHover = (container, type) => {
 };
 
 const setupEchoHover = (container, preset = "subtle") => {
-    if (!container) return () => {};
+    if (!container) return () => { };
     const letters = container.querySelectorAll("span");
-    if (!letters.length) return () => {};
+    if (!letters.length) return () => { };
 
     const config = ECHO_CONFIGS[preset] ?? ECHO_CONFIGS.subtle;
 
@@ -118,6 +119,9 @@ const setupEchoHover = (container, preset = "subtle") => {
 
 // ... existing code ...
 
+const MOBILE_PORTFOLIO_URL = "https://les-cv01.vercel.app/"; // Replace with your actual mobile-friendly portfolio URL
+// const MOBILE_PORTFOLIO_URL = "https://your-mobile-portfolio.com";
+
 const Welcome = () => {
     const titleRef = useRef(null);
     const subtitleRef = useRef(null);
@@ -136,31 +140,22 @@ const Welcome = () => {
 
     return (
         <section id="welcome">
-            {/* <p ref={subtitleRef}>
-                {renderText(
-                    "Welcome to Les's Portfolio!",
-                    "text-3xl font-georama",
-                    200,
-                )}
-            </p> */}
+            <p ref={subtitleRef}>
+                {renderText("Welcome to Les's Portfolio!", "text-3xl font-georama", 200)}
+            </p>
             <h1 ref={titleRef} className="mt-7">
                 {renderText(
                     "Innovation is my Passion",
-                    // "text-8xl italic font-georama text-white [-webkit-text-stroke:.5px_#000000]"
                     "text-8xl italic font-georama text-white [-webkit-text-stroke:.7px_#6ee7ff] [text-shadow:-1px_-1px_0_#6ee7ff,1px_-1px_0_#6ee7ff,-1px_1px_0_#6ee7ff,1px_1px_0_#6ee7ff]"
-                    // "text-8xl italic font-georama text-[#dffcff] [-webkit-text-stroke:1.5px_#7cf8ff] [text-shadow:0_0_2px_#7cf8ff,0_0_8px_#7cf8ff,0_0_16px_#52e5ff,0_0_30px_#1cc9ff]"
                 )}
             </h1>
-             <p ref={subtitleRef}>
-                {renderText(
-                    "Welcome to Les's Portfolio",
-                    "text-3xl font-georama",
-                    200,
-                )}
-            </p>
 
             <div className="small-screen">
                 <p>This portfolio is designed for desktop/tablet screens only.</p>
+                <p>
+                    For a better experience, visit{" "}
+                    <a href={MOBILE_PORTFOLIO_URL}>my mobile-friendly portfolio</a>.
+                </p>
             </div>
         </section>
     );
