@@ -475,7 +475,7 @@ const WORK_LOCATION = {
         // ▶ JavaScript/React Projects Folder
         {
             id: 11,
-            name: "JavaScript/React Projects",
+            name: "App and Website Projects",
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-52 right-80",
@@ -657,21 +657,143 @@ const WORK_LOCATION = {
                         },
                     ],
                 },
+                // Movie & TV Search App
+                {
+                    id: 9,
+                    name: "Movie and TV Search App",
+                    icon: "/images/folder.png",
+                    kind: "folder",
+                    position: "top-10 left-80",
+                    windowPosition: "top-[33vh] left-7",
+                    children: [
+                        {
+                            id: 1,
+                            name: "Movie and TV Search App Project.txt",
+                            icon: "/images/txt.png",
+                            kind: "file",
+                            fileType: "txt",
+                            position: "top-5 left-10",
+                            description: [
+                                "Our Movie and TV Search App is a fun and interactive way to discover and search for your favorite movies and TV shows.",
+                                "Instead of scrolling through endless lists, you can browse curated collections, read reviews, and share your own ratings.",
+                                "Think of it like having a personal movie and TV critic in your pocket—helping you find great content and avoid the duds.",
+                                "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+                            ],
+                        },
+                        {
+                            id: 2,
+                            name: "movie-and-tv-search-app.com",
+                            icon: "/images/safari.png",
+                            kind: "file",
+                            fileType: "url",
+                            href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-", // Placeholder URL
+                            position: "top-10 right-20",
+                        },
+                        {
+                            id: 3,
+                            name: "Movie and TV Search App Demo",
+                            icon: "/images/image.png",
+                            kind: "file",
+                            fileType: "video",
+                            position: "top-10 left-45",
+                            videoUrl: "/vids/movie_search_app.mp4",
+                        },
+                        {
+                            id: 4,
+                            name: "movie-and-tv-search-app.png",
+                            icon: "/images/image.png",
+                            kind: "file",
+                            fileType: "img",
+                            position: "top-52 right-80",
+                            imageUrl: "/images/project-3.png", // Placeholder image
+                        },
+                        {
+                            id: 5,
+                            name: "Design.fig",
+                            icon: "/images/plain.png",
+                            kind: "file",
+                            fileType: "fig",
+                            href: "https://google.com",
+                            position: "top-60 right-20",
+                        },
+                    ],
+                },
+                // OrangeU Website
+                {
+                    id: 10,
+                    name: "OrangeU Website",
+                    icon: "/images/folder.png",
+                    kind: "folder",
+                    position: "top-10 left-80",
+                    windowPosition: "top-[33vh] left-7",
+                    children: [
+                        {
+                            id: 1,
+                            name: "OrangeU Website Project.txt",
+                            icon: "/images/txt.png",
+                            kind: "file",
+                            fileType: "txt",
+                            position: "top-5 left-10",
+                            description: [
+                                "Our OrangeU Website is a modern, responsive platform designed to showcase our services and provide an excellent user experience.",
+                                "With a clean, intuitive design, users can easily navigate and find the information they need.",
+                                "The site is built with the latest web technologies to ensure fast loading times and seamless performance across all devices.",
+                                "It’s designed to be both visually appealing and highly functional, making it a great asset for our brand.",
+                            ],
+                        },
+                        {
+                            id: 2,
+                            name: "orangeu-website.com",
+                            icon: "/images/safari.png",
+                            kind: "file",
+                            fileType: "url",
+                            href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-", // Placeholder URL
+                            position: "top-10 right-20",
+                        },
+                        {
+                            id: 3,
+                            name: "OrangeU Website Demo",
+                            icon: "/images/image.png",
+                            kind: "file",
+                            fileType: "video",
+                            position: "top-10 left-45",
+                            videoUrl: "/vids/orange_u.mp4",
+                        },
+                        {
+                            id: 4,
+                            name: "orangeu-website.png",
+                            icon: "/images/image.png",
+                            kind: "file",
+                            fileType: "img",
+                            position: "top-52 right-80",
+                            imageUrl: "/images/project-3.png", // Placeholder image
+                        },
+                        {
+                            id: 5,
+                            name: "Design.fig",
+                            icon: "/images/plain.png",
+                            kind: "file",
+                            fileType: "fig",
+                            href: "https://google.com",
+                            position: "top-60 right-20",
+                        },
+                    ],
+                },
             ],
         },
         // ▶ Systems Administration Folder
         {
             id: 12,
-            name: "Systems Administation Projects",
+            name: "Information Technology",
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-20 left-5",
             windowPosition: "top-[15vh] left-5",
             children: [
-                // LesBot - AI Chatbot
+                // Cybersecurity and Network Security
                 {
                     id: 5,
-                    name: "LesBot - AI Chatbot",
+                    name: "Cybersecurity and Network Security",
                     icon: "/images/folder.png",
                     kind: "folder",
                     position: "top-10 left-5",
@@ -679,15 +801,15 @@ const WORK_LOCATION = {
                     children: [
                         {
                             id: 1,
-                            name: "LesBot Project.txt",
+                            name: "Cybersecurity and Network Security Project.txt",
                             icon: "/images/txt.png",
                             kind: "file",
                             fileType: "txt",
                             position: "top-5 left-10",
                             description: [
-                                "LesBot is an AI-powered chatbot designed to provide quick, conversational responses to user questions. ",
-                                "Developed in Python, it features a graphical, user-friendly interface built with CustomTkinter and is powered by an LLM (Large Language Model) through Ollama, enabling LesBot to engage in natural, human-like conversations. ",
-                                "This setup makes LesBot ideal for both casual chats and answering informational queries. Its simple, responsive design prioritizes accessibility, making it easy to use for a wide range of users.",
+                                "Cybersecurity and Network Security is a comprehensive project focused on protecting digital assets and maintaining secure network infrastructures. ",
+                                "This project involves implementing various security measures, conducting vulnerability assessments, and developing strategies to mitigate potential threats. ",
+                                "The goal is to ensure the confidentiality, integrity, and availability of information systems while complying with industry standards and regulations.",
                             ],
                         },
                         {
@@ -701,21 +823,21 @@ const WORK_LOCATION = {
                         },
                         {
                             id: 3,
-                            name: "LesBot",
+                            name: "Cybersecurity and Network Security",
                             icon: "/images/image.png",
                             kind: "file",
                             fileType: "video",
                             position: "top-40 left-10",
-                            videoUrl: "/vids/LesBot.mp4",
+                            videoUrl: "/vids/Cyitnet-1.mp4",
                         },
                         {
                             id: 4,
-                            name: "LesBot",
+                            name: "Cybersecurity and Network Security",
                             icon: "/images/image.png",
                             kind: "file",
                             fileType: "video",
                             position: "top-55 left-10",
-                            videoUrl: "/vids/LesBot.mp4",
+                            videoUrl: "/vids/Cyitnet-1.mp4",
                         },
                         {
                             id: 5,
@@ -768,7 +890,7 @@ const WORK_LOCATION = {
         // ▶ Printing Folder
         {
             id: 13,
-            name: "Digital Printing Projects",
+            name: "Digital Printing and Graphics Projects",
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-20 left-5",

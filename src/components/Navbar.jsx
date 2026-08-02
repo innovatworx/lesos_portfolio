@@ -3,11 +3,20 @@ import { Moon, Sun, Wifi, Volume2, Bluetooth, Sun as Brightness } from "lucide-r
 import { navIcons, navLinks } from "#constants";
 import useWindowStore from "#store/window.js";
 import { Tooltip } from "react-tooltip";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = ({ onToggleTheme, theme }) => {
     const { openWindow } = useWindowStore();
     const [activeDropdown, setActiveDropdown] = useState(null);
+    const [currentTime, setCurrentTime] = useState(() => dayjs());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentTime(dayjs());
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
 
     const openFromClick = (event, windowKey) => {
         const rect = event.currentTarget.getBoundingClientRect();
@@ -85,7 +94,7 @@ const Navbar = ({ onToggleTheme, theme }) => {
                 </ul>
 
                 <Tooltip id="navbar-tooltip" className="app-tooltip" place="bottom" offset={8} />
-                <time>{dayjs().format('ddd MMM D h:mm A')}</time>
+                <time>{currentTime.format('ddd MMM D h:mm A')}</time>
             </div>
         </nav>
     );
