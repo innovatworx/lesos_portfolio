@@ -28,7 +28,7 @@ const VideoWindowContent = () => {
                 <h2>{data?.name || "Video Preview"}</h2>
             </div>
 
-            <div className="p-5 bg-white">
+            <div className="p-5 bg-transparent">
                 <div 
                     className="w-full"
                     onMouseEnter={handleMouseEnter}
