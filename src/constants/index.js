@@ -17,10 +17,15 @@ const navLinks = [
 ];
 
 const navIcons = [
+    // Original Wi-Fi menu icon:
+    // {
+    //     id: 1,
+    //     img: "/icons/wifi.svg",
+    //     tooltip: "Wi-Fi",
+    // },
     {
         id: 1,
-        img: "/icons/wifi.svg",
-        tooltip: "Wi-Fi",
+        tooltip: "Settings",
     },
     {
         id: 2,
@@ -1151,5 +1156,4 @@ export { INITIAL_Z_INDEX, WINDOW_CONFIG };
 // };
 //
 // export { INITIAL_Z_INDEX, WINDOW_CONFIG };
-
 

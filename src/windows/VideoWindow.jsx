@@ -1,13 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { WindowControls } from "#components";
 import WindowWrapper from "#hoc/WindowWrapper.jsx";
 import useWindowStore from "#store/window.js";
 
-const VideoWindowContent = () => {
+const VideoWindowContent = ({ volume }) => {
     const videoRef = useRef(null);
     const { windows } = useWindowStore();
     const data = windows.video?.data;
     const videoUrl = data?.videoUrl || "";
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.volume = volume / 100;
+        }
+    }, [videoUrl, volume]);
 
     const handleMouseEnter = () => {
         if (videoRef.current) {

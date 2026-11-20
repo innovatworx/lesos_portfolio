@@ -1,4 +1,4 @@
-// import React, {useEffect, useState} from 'react'
+import { useState } from "react";
 
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
@@ -20,12 +20,21 @@ gsap.registerPlugin(Draggable);
 
 const App = () => {
     const { theme, toggleTheme } = useTheme();
+    const [brightness, setBrightness] = useState(100);
+    const [volume, setVolume] = useState(100);
 
 
 return (
     <main>
-        <div className="relative z-50">
-            <Navbar onToggleTheme={toggleTheme} theme={theme} />
+        <div className="relative z-[2001]">
+            <Navbar
+                onToggleTheme={toggleTheme}
+                theme={theme}
+                brightness={brightness}
+                onBrightnessChange={setBrightness}
+                volume={volume}
+                onVolumeChange={setVolume}
+            />
         </div>
         <Welcome />
         <Dock />
@@ -40,9 +49,16 @@ return (
         <Text />
         <Images />
         <Contact />
-        <VideoWindow />
+        <VideoWindow volume={volume} />
 
         <Home />
+
+        <div
+            aria-hidden="true"
+            className="fixed inset-0 z-[2000] bg-black pointer-events-none transition-opacity duration-75"
+            style={{ opacity: (100 - brightness) / 100 }}
+        />
+
     </main>
 
     );
